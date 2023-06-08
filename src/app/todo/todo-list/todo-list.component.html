@@ -1,0 +1,9 @@
+<ng-container>
+  <div *ngFor="let todo of todos$$ | async" >
+    <span class='todo_span mr-2'> ID: {{todo.id}} Text: {{todo.text}} </span>
+    <input class='todo_input' type='checkbox' [checked]="todo.isDone">
+    <button class='todo_button ml-5' (click)="removeTodo(todo)">x</button>
+  </div>
+</ng-container>
+
+<app-edit-todo></app-edit-todo>
